@@ -106,4 +106,14 @@ var factorial = function (n) {
     }
     return factorial;
 };
-console.log(factorial(5)); // Output: 120
+//multiple sum
+var sumMultiples = function (n, divisor) {
+    var sum = 0;
+    for (var i = 0; i < n; i++) {
+        if (i % divisor === 0) {
+            sum += i;
+        }
+    }
+    return sum;
+};
+console.log(sumMultiples(7, 5)); // Output: 20 (0 + 2 + 4 + 6 + 8)

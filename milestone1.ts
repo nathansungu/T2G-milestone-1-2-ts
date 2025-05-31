@@ -108,3 +108,15 @@ const factorial =(n: number): number => {
     }
     return factorial;
 }
+
+//multiple sum
+const sumMultiples=(n:number, divisor:number):number=>{
+    let sum: number = 0;
+    for(let i: number = 0; i < n; i++){
+        if(i % divisor === 0){
+            sum += i;
+        }
+    }
+    return sum;
+}
+console.log(sumMultiples(7, 5)); // Output: 20 (0 + 2 + 4 + 6 + 8)
