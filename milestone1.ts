@@ -92,4 +92,13 @@ const sumEvenNumbers = (n: number): number => {
   }
   return sum;
 };
-console.log(sumEvenNumbers(6));
+
+//multiply by itself
+const powerUp =(num:number, times:number):number =>{
+    let result:number = 1;
+    for(let i:number=0; i<times; i++){
+        result *= num;
+    }
+    return result;
+}
+

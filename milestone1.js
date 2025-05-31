@@ -90,4 +90,12 @@ var sumEvenNumbers = function (n) {
     }
     return sum;
 };
-console.log(sumEvenNumbers(6));
+//multiply by itself
+var powerUp = function (num, times) {
+    var result = 1;
+    for (var i = 0; i < times; i++) {
+        result *= num;
+    }
+    return result;
+};
+console.log(powerUp(0, 0));
