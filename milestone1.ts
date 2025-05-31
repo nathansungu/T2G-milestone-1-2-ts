@@ -10,4 +10,11 @@ const perimeter = (length:number, width:number):number => 2 * (length + width);
 //check Negative
  const isNegative =(num: number):boolean => num < 0?true:false;
 
- console.log(isNegative(-5));
+//check if one can drive
+
+const canDrive = (name:string, age:number):string => {
+    let response: string;
+    age>=18 ? response =`"${name}" is old enough to drive.` : response =`"${name}" is not old enough to drive yet`
+    return response;
+}
+
