@@ -29,3 +29,23 @@ const findlargest = (a:number, b:number, c:number):number =>{
         return c;
     }
 }
+
+//BMI Calculator
+const calculateBMI =(weight:number, height:number):string => {
+    let BMI:number = weight / (height * height);
+    let category: string;
+
+    if (BMI<18.5) {
+        category = "Underweight";
+        
+    } else if(BMI <24.9) {
+        category = "Normal weight";
+        
+    } else if(BMI <29.9) {
+        category = "Overweight";
+    }else{
+        category = "Obese";
+    }
+
+    return `Your BMI is ${BMI.toFixed(2)} - ${category}`;
+}
