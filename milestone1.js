@@ -98,4 +98,12 @@ var powerUp = function (num, times) {
     }
     return result;
 };
-console.log(powerUp(0, 0));
+//factorial calculator
+var factorial = function (n) {
+    var factorial = 1;
+    for (var i = 1; i <= n; i++) {
+        factorial *= i;
+    }
+    return factorial;
+};
+console.log(factorial(5)); // Output: 120
