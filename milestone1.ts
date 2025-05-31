@@ -101,22 +101,31 @@ const powerUp = (num: number, times: number): number => {
   return result;
 };
 //factorial calculator
-const factorial =(n: number): number => {
-    let factorial: number = 1;
-    for(let i: number = 1; i<=n; i++){
-        factorial *= i;
-    }
-    return factorial;
-}
+const factorial = (n: number): number => {
+  let factorial: number = 1;
+  for (let i: number = 1; i <= n; i++) {
+    factorial *= i;
+  }
+  return factorial;
+};
 
 //multiple sum
-const sumMultiples=(n:number, divisor:number):number=>{
+const sumMultiples = (n: number, divisor: number): number => {
+  let sum: number = 0;
+  for (let i: number = 0; i < n; i++) {
+    if (i % divisor === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+};
+
+//sum of digits
+const sumDigits =(num:number): number =>{
     let sum: number = 0;
-    for(let i: number = 0; i < n; i++){
-        if(i % divisor === 0){
-            sum += i;
-        }
+    while (num > 0) {
+        sum += num % 10;
+        num = Math.floor(num / 10);
     }
     return sum;
 }
-console.log(sumMultiples(7, 5)); // Output: 20 (0 + 2 + 4 + 6 + 8)
