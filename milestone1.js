@@ -3,13 +3,17 @@ var sum = function (a, b) { return a + b; };
 //convert minutes to seconds
 var convert = function (minutes) { return minutes * 60; };
 // perimeter of a rectangle
-var perimeter = function (length, width) { return 2 * (length + width); };
+var perimeter = function (length, width) {
+    return 2 * (length + width);
+};
 //check Negative
-var isNegative = function (num) { return num < 0 ? true : false; };
+var isNegative = function (num) { return (num < 0 ? true : false); };
 //check if one can drive
 var canDrive = function (name, age) {
     var response;
-    age >= 18 ? response = "\"".concat(name, "\" is old enough to drive.") : response = "\"".concat(name, "\" is not old enough to drive yet");
+    age >= 18
+        ? (response = "\"".concat(name, "\" is old enough to drive."))
+        : (response = "\"".concat(name, "\" is not old enough to drive yet"));
     return response;
 };
 //largest number
@@ -73,5 +77,17 @@ var fizzBuzzCheck = function (number) {
     }
 };
 //perimeter 2
-var perimeterOfShape = function (shape, number) { return shape === "s" ? number * 4 : (6.28 * number).toFixed(2); };
-console.log(perimeterOfShape("c", 4)); // 31.400000000000002
+var perimeterOfShape = function (shape, number) {
+    return shape === "s" ? number * 4 : parseFloat((6.28 * number).toFixed(2));
+};
+//sum of even numbers
+var sumEvenNumbers = function (n) {
+    var sum = 0;
+    for (var i = 0; i < n; i++) {
+        if (i % 2 === 0) {
+            sum += i;
+        }
+    }
+    return sum;
+};
+console.log(sumEvenNumbers(6));
