@@ -78,4 +78,6 @@ const calculateBMI =(weight:number, height:number):string => {
         return `${number}`;
     }
  }
- 
+
+ //perimeter 2
+ const perimeterOfShape = (shape:string, number:number) => shape ==="s"? number*4: (6.28*number).toFixed(2);

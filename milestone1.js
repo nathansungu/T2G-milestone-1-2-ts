@@ -69,7 +69,9 @@ var fizzBuzzCheck = function (number) {
         return "Buzz";
     }
     else {
-        return "".concat(number.toString);
+        return "".concat(number);
     }
 };
-console.log(fizzBuzzCheck(7));
+//perimeter 2
+var perimeterOfShape = function (shape, number) { return shape === "s" ? number * 4 : (6.28 * number).toFixed(2); };
+console.log(perimeterOfShape("c", 4)); // 31.400000000000002
