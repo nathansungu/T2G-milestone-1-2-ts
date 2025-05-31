@@ -18,3 +18,14 @@ const canDrive = (name:string, age:number):string => {
     return response;
 }
 
+//largest number
+const findlargest = (a:number, b:number, c:number):number =>{
+    
+    if(a>b && a>c){
+        return a;
+    } else if(b>a && b>c){
+        return b;
+    }else {
+        return c;
+    }
+}
