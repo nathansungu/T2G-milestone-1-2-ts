@@ -57,4 +57,19 @@ var greetUser = function (name, hour) {
         return "Good night, ".concat(name, "!");
     }
 };
-console.log(greetUser("John", 11.5));
+//fizzBuzz
+var fizzBuzzCheck = function (number) {
+    if (number % 3 === 0 && number % 5 === 0) {
+        return "FizzBuzz";
+    }
+    else if (number % 3 === 0) {
+        return "Fizz";
+    }
+    else if (number % 5 === 0) {
+        return "Buzz";
+    }
+    else {
+        return "".concat(number.toString);
+    }
+};
+console.log(fizzBuzzCheck(7));
