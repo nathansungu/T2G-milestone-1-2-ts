@@ -102,3 +102,12 @@ const countTruthy = (object: Record<string, unknown>): number => {
   }
   return count;
 };
+
+//average of numbers
+const average = (arry: number[]): number => {
+  let sum: number = 0;
+  for (let i = 0; i < arry.length; i++) {
+    sum += arry[i];
+  }
+  return sum / arry.length;
+};
