@@ -1,5 +1,26 @@
 {
   "devDependencies": {
     "typescript": "^5.8.3"
-  }
+  },
+  "dependencies": {
+    "tsc": "^2.0.4"
+  },
+  "name": "t2g-milestone-1-2-ts",
+  "version": "1.0.0",
+  "description": "**Typescript Milestone One and two**",
+  "main": "milestone1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathansungu/T2G-milestone-1-2-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathansungu/T2G-milestone-1-2-ts/issues"
+  },
+  "homepage": "https://github.com/nathansungu/T2G-milestone-1-2-ts#readme"
 }
