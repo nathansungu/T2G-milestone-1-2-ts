@@ -59,12 +59,22 @@ const countProperties = (n: {}): number => {
 };
 
 //filter by length
-const filterByLength =(arr:string[], numbers:number)=>{
-  let newarray:string[] =[];
-  for(let i:number=0; i<arr.length; i++){
-    if (arr[i].length>=numbers) {
-      newarray.push(arr[i])       
+const filterByLength = (arr: string[], numbers: number): string[] => {
+  let newarray: string[] = [];
+  for (let i: number = 0; i < arr.length; i++) {
+    if (arr[i].length >= numbers) {
+      newarray.push(arr[i]);
     }
   }
   return newarray;
-}
+};
+
+//sum of even Numbers
+const sumEvenNumber = (arr: number[]): number => {
+  let sum: number = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      sum += arr[i];
+    }
+  }
+};
