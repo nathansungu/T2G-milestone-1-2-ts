@@ -26,9 +26,25 @@ var findWinner = function (n) {
     }
     return winner;
 };
-var candidates = [
-    { name: "Alice", votes: 50 },
-    { name: "Bob", votes: 75 },
-    { name: "Charlie", votes: 65 }
-];
-console.log(findWinner(candidates));
+//longest word
+var findLongestWord = function (n) {
+    var longestWord = n[0];
+    for (var i = 1; i < n.length; i++) {
+        if (n[i].length > longestWord.length) {
+            longestWord = n[i];
+        }
+    }
+    return longestWord;
+};
+//count properties
+//define object
+var countProperties = function (n) {
+    var count = 0;
+    for (var key in n) {
+        if (n.hasOwnProperty(key)) {
+            count++;
+        }
+    }
+    return count;
+};
+console.log(countProperties({ name: "Alice", age: 25, city: "Paris" }));

@@ -36,11 +36,24 @@ const findWinner = (n: Candidate[]): Candidate => {
 
 //longest word
 const findLongestWord = (n: string[]): string => {
-  let longestWord:string = n[0];
+  let longestWord: string = n[0];
   for (let i = 1; i < n.length; i++) {
     if (n[i].length > longestWord.length) {
       longestWord = n[i];
     }
   }
   return longestWord;
+};
+
+//count properties
+//define object
+
+const countProperties = (n: {}): number => {
+  let count: number = 0;
+  for (let key in n) {
+    if (n.hasOwnProperty(key)) {
+      count++;
+    }
+  }
+  return count;
 };
