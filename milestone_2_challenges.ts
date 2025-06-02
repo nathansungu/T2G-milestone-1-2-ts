@@ -111,3 +111,14 @@ const average = (arry: number[]): number => {
   }
   return sum / arry.length;
 };
+
+//linear search
+const linearSearch = (array: number[], value: number): number => {
+  let index: number = -1;
+  for (let i = 0; i < array.length; i++) {
+    if (value === array[i]) {
+      index = i;
+    }
+  }
+  return index;
+};
