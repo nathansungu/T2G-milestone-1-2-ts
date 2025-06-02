@@ -57,3 +57,14 @@ const countProperties = (n: {}): number => {
   }
   return count;
 };
+
+//filter by length
+const filterByLength =(arr:string[], numbers:number)=>{
+  let newarray:string[] =[];
+  for(let i:number=0; i<arr.length; i++){
+    if (arr[i].length>=numbers) {
+      newarray.push(arr[i])       
+    }
+  }
+  return newarray;
+}
