@@ -174,6 +174,29 @@ const removeDuplicates = (array: string[]): string[] => {
   return noDuplicate;
 };
 
+// Most frequent element
+const mostFrequent = (array: string[]): string => {
+  let maxcount = 0;
+  let mostFrequent: string ;
+
+  for (let i:number = 0; i < array.length; i++) {
+    let count = 0;
+
+    for (let j:number = 0; j < array.length; j++) {
+      if (array[i] == array[j]) {
+        count++;
+      }
+      if (count > maxcount) {
+        maxcount = count;
+        mostFrequent = array[i];
+      }
+    }
+  }
+  return mostFrequent;
+};
+
+
+
 
 
 
