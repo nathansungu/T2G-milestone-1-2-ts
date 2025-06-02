@@ -115,7 +115,18 @@ const average = (arry: number[]): number => {
 //linear search
 const linearSearch = (array: number[], value: number): number => {
   let index: number = -1;
-  for (let i = 0; i < array.length; i++) {
+  for (let i:number = 0; i < array.length; i++) {
+    if (value === array[i]) {
+      index = i;
+    }
+  }
+  return index;
+};
+
+//Reverse linear search
+const reverseLinearSearch = (array: number[], value: number): number => {
+  let index: number = -1;
+  for (let i:number = array.length-1; i >0; i--) {
     if (value === array[i]) {
       index = i;
     }
