@@ -77,4 +77,28 @@ const sumEvenNumber = (arr: number[]): number => {
       sum += arr[i];
     }
   }
+  return sum;
+};
+
+//difference btn even odd sum
+const differenceEvenOdd = (array: number[]): number => {
+  let oddSum: number = 0;
+  let evenSum: number = 0;
+  for (let i = 0; i < array.length; i++) {
+    array[i] % 2 === 0 ? (evenSum += array[i]) : (oddSum += array[i]);
+  }
+  return evenSum - oddSum;
+};
+
+//count truthy
+//define object type
+
+const countTruthy = (object: Record<string, unknown>): number => {
+  let count: number = 0;
+  for (let key in object) {
+    if (object[key]) {
+      count += 1;
+    }
+  }
+  return count;
 };

@@ -47,4 +47,44 @@ var countProperties = function (n) {
     }
     return count;
 };
-console.log(countProperties({ name: "Alice", age: 25, city: "Paris" }));
+//filter by length
+var filterByLength = function (arr, numbers) {
+    var newarray = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i].length >= numbers) {
+            newarray.push(arr[i]);
+        }
+    }
+    return newarray;
+};
+//sum of even Numbers
+var sumEvenNumber = function (arr) {
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            sum += arr[i];
+        }
+    }
+    return sum;
+};
+//difference btn even odd sum
+var differenceEvenOdd = function (array) {
+    var oddSum = 0;
+    var evenSum = 0;
+    for (var i = 0; i < array.length; i++) {
+        array[i] % 2 === 0 ? (evenSum += array[i]) : (oddSum += array[i]);
+    }
+    return evenSum - oddSum;
+};
+//count truthy
+//define object type
+var countTruthy = function (object) {
+    var count = 0;
+    for (var key in object) {
+        if (object[key]) {
+            count += 1;
+        }
+    }
+    return count;
+};
+console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }));
