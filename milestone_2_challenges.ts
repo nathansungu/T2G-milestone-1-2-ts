@@ -133,3 +133,16 @@ const reverseLinearSearch = (array: number[], value: number): number => {
   }
   return index;
 };
+
+//line search all indices
+//linear search
+const linearSearchAllIndices = (array: number[], value: number): number[] => {
+  let index: number[] = [];
+  for (let i:number = 0; i < array.length; i++) {
+    if (value === array[i]) {
+      index.push(i);
+    }
+  }
+  return index;
+};
+
