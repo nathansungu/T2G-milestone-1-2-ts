@@ -24,8 +24,7 @@ type Candidate = {
   name: string;
   votes: number;
 };
-const findWinner = (n:Candidate[]):Candidate => {
-  
+const findWinner = (n: Candidate[]): Candidate => {
   let winner = n[0];
   for (let i = 1; i < n.length; i++) {
     if (n[i].votes > winner.votes) {
@@ -34,10 +33,14 @@ const findWinner = (n:Candidate[]):Candidate => {
   }
   return winner;
 };
-const candidates = [
-  { name: "Alice", votes: 50 },
-  { name: "Bob", votes: 75 },
-  { name: "Charlie", votes: 65 }
-];
 
-console.log(findWinner(candidates))
+//longest word
+const findLongestWord = (n: string[]): string => {
+  let longestWord:string = n[0];
+  for (let i = 1; i < n.length; i++) {
+    if (n[i].length > longestWord.length) {
+      longestWord = n[i];
+    }
+  }
+  return longestWord;
+};
