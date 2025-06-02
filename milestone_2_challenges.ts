@@ -146,3 +146,22 @@ const linearSearchAllIndices = (array: number[], value: number): number[] => {
   return index;
 };
 
+//count occoureences 
+// Count occurrences
+const countOccurrences = (array: string[]): { [key: string]: number } => {
+  const countobject: { [key: string]: number } = {};
+
+  for (let i = 0; i < array.length; i++) {
+    let item = array[i];
+    if (countobject[item]) {
+      countobject[item] += 1;
+    } else {
+      countobject[item] = 1;
+    }
+  }
+  return countobject;
+};
+
+
+
+
