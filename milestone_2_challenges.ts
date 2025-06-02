@@ -135,7 +135,7 @@ const reverseLinearSearch = (array: number[], value: number): number => {
 };
 
 //line search all indices
-//linear search
+
 const linearSearchAllIndices = (array: number[], value: number): number[] => {
   let index: number[] = [];
   for (let i:number = 0; i < array.length; i++) {
@@ -161,6 +161,19 @@ const countOccurrences = (array: string[]): { [key: string]: number } => {
   }
   return countobject;
 };
+
+
+// Remove duplicates
+const removeDuplicates = (array: string[]): string[] => {
+  const noDuplicate: string[] = [];
+  for (let i = 0; i < array.length; i++) {
+    if (!noDuplicate.includes(array[i])) {
+      noDuplicate.push(array[i]);
+    }
+  }
+  return noDuplicate;
+};
+
 
 
 
