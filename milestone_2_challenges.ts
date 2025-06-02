@@ -48,7 +48,7 @@ const findLongestWord = (n: string[]): string => {
 //count properties
 //define object
 
-const countProperties = (n: {}): number => {
+const countProperties = (n: Object): number => {
   let count: number = 0;
   for (let key in n) {
     if (n.hasOwnProperty(key)) {
@@ -92,7 +92,6 @@ const differenceEvenOdd = (array: number[]): number => {
 
 //count truthy
 //define object type
-
 const countTruthy = (object: Record<string, unknown>): number => {
   let count: number = 0;
   for (let key in object) {
@@ -115,7 +114,7 @@ const average = (arry: number[]): number => {
 //linear search
 const linearSearch = (array: number[], value: number): number => {
   let index: number = -1;
-  for (let i:number = 0; i < array.length; i++) {
+  for (let i: number = 0; i < array.length; i++) {
     if (value === array[i]) {
       index = i;
     }
@@ -126,7 +125,7 @@ const linearSearch = (array: number[], value: number): number => {
 //Reverse linear search
 const reverseLinearSearch = (array: number[], value: number): number => {
   let index: number = -1;
-  for (let i:number = array.length-1; i >0; i--) {
+  for (let i: number = array.length - 1; i > 0; i--) {
     if (value === array[i]) {
       index = i;
     }
@@ -138,7 +137,7 @@ const reverseLinearSearch = (array: number[], value: number): number => {
 
 const linearSearchAllIndices = (array: number[], value: number): number[] => {
   let index: number[] = [];
-  for (let i:number = 0; i < array.length; i++) {
+  for (let i: number = 0; i < array.length; i++) {
     if (value === array[i]) {
       index.push(i);
     }
@@ -146,7 +145,7 @@ const linearSearchAllIndices = (array: number[], value: number): number[] => {
   return index;
 };
 
-//count occoureences 
+//count occoureences
 // Count occurrences
 const countOccurrences = (array: string[]): { [key: string]: number } => {
   const countobject: { [key: string]: number } = {};
@@ -162,7 +161,6 @@ const countOccurrences = (array: string[]): { [key: string]: number } => {
   return countobject;
 };
 
-
 // Remove duplicates
 const removeDuplicates = (array: string[]): string[] => {
   const noDuplicate: string[] = [];
@@ -176,28 +174,23 @@ const removeDuplicates = (array: string[]): string[] => {
 
 // Most frequent element
 const mostFrequent = (array: string[]): string => {
-  let maxcount = 0;
-  let mostFrequent: string ;
+  let mostFrequentElement = array[0];
+  let frequency: { [key: string]: number } = {};
 
-  for (let i:number = 0; i < array.length; i++) {
-    let count = 0;
-
-    for (let j:number = 0; j < array.length; j++) {
-      if (array[i] == array[j]) {
-        count++;
-      }
-      if (count > maxcount) {
-        maxcount = count;
-        mostFrequent = array[i];
-      }
+  for (const element of array) {
+    if (frequency[element]) {
+      frequency[element]++;
+    } else {
+      frequency[element] = 1;
     }
   }
-  return mostFrequent;
+  for (const key in Object.keys(frequency)) {
+    if (frequency[key] > frequency[mostFrequentElement]) {
+      mostFrequentElement = key;
+    }
+  }
+
+  return mostFrequentElement;
 };
-
-
-
-
-
 
 
